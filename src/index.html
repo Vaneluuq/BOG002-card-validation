@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <title>E-BOOK</title>
 </head>
 <body>
 <header>
     <div id="encabezado">
-        <a href="index.html"><img src="imagenes/ebookimage.jpg" alt="imagen1"></a>
+        <a href="index.html"><img src="imagenes/ebookimage.jpg" alt="imagen1" class="imagen1"></a>
         <nav>
         <a href="#inicio">INICIO</a> 
         <a href="#libreria">LIBRERIA</a> 
@@ -23,18 +24,19 @@
         <h1 id="titulo">NOMBRE DEL LIBRO</h1>
         <h2 id="parrafo1">Estas a un solo paso de finalizar tu compra</h2>
         <h3 id="parrafo2">Productos en tu carro</h3>
-        <img src="imagenes/compraebook.jpg" alt="imagen2">
+        <img src="imagenes/compraebook.jpg" alt="imagen2" class="imagen2">
         <input type="number" id="cantidadProductos" min="1" max="99" >
             <p id="valor">$15000</p> 
         <input type="submit" value="Pagar">
     </section>
     <br>
     <br>
-    <section>
-        <input type="number" id="numeroDeTarjeta" maxlength="10">
-        <input type="text" id="nombre">
+    <section class="form">
+        <input type="text" id="numeroDeTarjeta" placeholder="número de tarjeta" maxlength="16">
+        <input type="text" id="nombre" placeholder="Nombre" autocomplete="off">
         <input type="date" id="fechaV">
-        <input type="number" id="cvc" maxlength="4">
+        <input type="text" id="cvc"  placeholder="CVC">
+        <button type="submit" class="botonEnviar">Verificar</button>
     </section>
 </main>
 <footer></footer>  

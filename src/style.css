@@ -1,0 +1,11 @@
+header{
+    background-color: rgb(198, 238, 182);
+    
+}
+
+#encabezado .imagen1{
+    width: 10%;
+    object-fit: contain;
+    
+}
+
