@@ -1,19 +1,98 @@
 header{
     background-color: rgb(198, 238, 182);
+    padding: 5px 0px; 
     
 }
 
-#encabezado .imagen1{
-    width: 10%;
-    ;
-    
+body {
+    margin: 0;
+    background-color:rgb(245, 245, 245);
+    height: 100%;
+    width: 100%;
 }
 
 
-/*#contenedor {
-    display: inline;
+header .encabezado {
+    display: flex;
+    align-items: center;
+}
+
+header .encabezado .imagen1 {
+    width: 50px;
+}
+
+header .encabezado a {
+    color: black;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+a {
+    display: inline-block;
+}
+
+.encabezado {
+    width: 1140px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px; 
+
+}
+h1 {
+    font-size: 28px;
+}
+.parrafo1{
+    color: rgb(83, 128, 114);
+    font-size: 20px;
 }
 
 .form {
     display: none;
 }
+
+.imagen2{
+    right: 10%;
+    border-radius: 20px;
+    width: 35%;
+    display: block;
+}
+
+#encabezado .imagen1{
+    width: 10%;
+    object-fit: contain;
+}
+
+#contenedor {
+    display: flex;
+    padding-left: 50px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+    margin: 15kkkkkpx;
+}
+
+#contenedor .bloque-contenedor {
+    width: 300px;
+    text-align: center;
+    left: auto;
+    background-color: white;
+    position: relative;   
+    padding: 20px 20px;
+}
+
+#contenedor .bloque-contenedor::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    content:" ";
+    background: #5A3F37;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    width: 100%;
+    filter: blur(20px);
+    z-index:-1;
+}
+
+
+
