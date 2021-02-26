@@ -5,7 +5,15 @@ header{
 
 #encabezado .imagen1{
     width: 10%;
-    object-fit: contain;
+    ;
     
 }
 
+
+/*#contenedor {
+    display: inline;
+}
+
+.form {
+    display: none;
+}
