@@ -1,19 +1,21 @@
-document.getElementById("pagar").addEventListener("click", comenzar);
-function comenzar() {
-ocultarMostrar("form","contenedor");
+function primerPaso (numeroDeTarjeta) {
+    return numeroDeTarjeta.Value;
 }
-function ocultarMostrar (pantallaEncendida , pantallaApagada){
-    document.getElementById(pantallaApagada).style.display = "none";
-    document.getElementById(pantallaEncendida).style.display = "inline";
+function luhnCheck() {
+    const multiplicacionP = primerPaso.toString().split("").map(Number);
+}
+    const sum = multiplicacionP
+    .map((digit,idx) => idx % 2 === multiplicacionP.length % 2 ? fixDouble(digit*2) : digit).reduce((acc,digit) =>
+    { acc +=digit,0});
+    
+    console.log (sum)
+    return 
+    if (sum % 10 === 0) {
+        console.log ("true")
+    }
+   else {"false"}
+}
+function fixDouble (number) {
+    return number > 9 ? number - 9: number;
 }
 
-
-const cantidadP= document.getElementById("cantidadProductos");
-const precioP = 15000;
-const btnCalcular = document.getElementById("pagar");
-
-btnCalcular.addEventListener("click", mul);
-function mul () {
-const multi = cantidadP.value*precioP;
-document.getElementById("valor").innerHTML= "El valor total a pagar es de $ "+ multi + " por favor ingrese la siguiente información para finalizar la compra ";
-}

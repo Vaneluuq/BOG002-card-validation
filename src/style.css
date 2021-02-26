@@ -48,10 +48,11 @@ h1 {
     display: none;
 }
 
-.imagen2 {
+.imagen2{
     right: 10%;
     border-radius: 20px;
     width: 35%;
+    display: block;
 }
 
 #encabezado .imagen1{
