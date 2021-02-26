@@ -1,4 +1,4 @@
-import validator from "./validator.js";
+//import validator from "./validator.js";
 
 document.getElementById("pagar").addEventListener("click", comenzar);
 function comenzar() {
@@ -20,14 +20,43 @@ const multi = cantidadP.value*precioP;
 document.getElementById("valor").innerHTML= "El valor total a pagar es de $ "+ multi + " por favor ingrese la siguiente información para finalizar la compra ";
 }
 
+function stringN() {
+    const numeroDeTarjetaInput =  document.getElementById("numeroDeTarjeta").value;
+    const toString  = numeroDeTarjetaInput.toString().split("");
+    console.log (toString)
+}
+
+const btnValidar= document.getElementById("botonValidar");
+btnValidar.addEventListener("click", stringN);
+
+
+
+
 
 /*Función para llamar el numero de la tarjeta ingresado*/
-const numeroDeTarjetaInput =  document.getElementById("numeroDeTarjeta").value;
+
 
 /*Función para guardar el numero de la tarjeta de crédito*/
-function getNumeroDeTarjetaInput(){
-    return numeroDeTarjetaInput.value;
-}   
+//function getNumeroDeTarjetaInput(){
+  //return numeroDeTarjetaInput.value; }
+
+//function isValid() {
+ 
+//}
+//const numero= 2
+
+/*function isValid() {
+  const numeroDeTarjetaInput =  document.getElementById("numeroDeTarjeta").value;
+  const rest = numeroDeTarjetaInput * numero;
+  document.getElementById("respuestaValidacion").innerHTML= "no y si " + rest;
+}
+
+const btnValidar= document.getElementById("botonValidar");
+btnValidar.addEventListener("click", isValid)
+
+const multiplicacionP = numeroDeTarjetaInput.toString().split("").map(Number);*/
+
+
 
 
 
