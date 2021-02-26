@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-BOOK</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <header>
-    <div class="encabezado">
+    <div id="encabezado" class="encabezado">
         <a href="index.html"><img src="imagenes/ebookimage.jpg" alt="imagen1" class="imagen1"></a>
         <nav>
         <a href="#inicio">INICIO</a> 
@@ -19,29 +20,40 @@
 </header>
 
 <main>
-    <section class="contenedor" id="contenedor">
-        <h1 class="titulo">NOMBRE DEL LIBRO</h1>
-        <h2 class="parrafo1">Estas a un solo paso de finalizar tu compra</h2>
-        <h3 class="parrafo2">Productos en tu carro</h3>
+    <section id="contenedor" class="contenedor">
         <img src="imagenes/compraebook.jpg" alt="imagen2" class="imagen2">
-        <input type="number" id="cantidadProductos" min="1" max="99" >
-            <p id="valor">$15000</p> 
-        <input type="button" value="Pagar" id="pagar" class="boton">
+        <div class="bloque-contenedor">
+           <h1 id="titulo" class="titulo">E-book Lectura Rapida para toda la Familia</h1> <hr>
+           <h2 id="parrafo1" class="parrafo1">Tipo de publicacion: publicacion digital <br>
+            Editorial: Mdios Editores S.A <br>
+            Numero de paginas: 123</h2> <hr>
+            <h3>Precio: $15000</h3>
+           <h3 id="parrafo2">Productos a tu carro:</h3>    
+           <input type="number" id="cantidadProductos" min="1" max="99" > 
+           <input class="boton" type="button" value="Pagar" id="pagar">
+        </div>
     </section>
     <br>
     <br>
     <section class="form" id="form">
-        <input type="text" id="numeroDeTarjeta" placeholder="número de tarjeta" maxlength="16">
-        <input type="text" id="nombre" placeholder="Nombre" autocomplete="off">
-        <input type="date" id="fechaV">
-        <input type="text" id="cvc"  placeholder="CVC">
-        <button type="submit" class="botonEnviar">Verificar</button>
-        <div id="resultado"></div>
+        <p id="valor"></p>
+        <div class="bloque-tarjeta">
+            <label for="numeroDeTarjeta">Numero de Tarjeta</label><br>
+            <input type="text" id="numeroDeTarjeta" placeholder="número de tarjeta" maxlength="16"><br>
+            <label for="nombre">Nombre en la tarjeta</label><br>  
+            <input type="text" id="nombre" placeholder="Nombre" autocomplete="off"><br>
+            <label for="fechaV">Fecha Vencimiento</label><br>
+            <input type="date" id="fechaV"><br>
+            <label for="cvc">Codigo de seguridad</label><br>  
+            <input type="text" id="cvc"  placeholder="CVC"><br>
+            <button type="submit" class="botonEnviar">Verificar</button><br>
+        </div>
     </section>
 </main>
-
-<footer></footer>
-<script src="index.js"></script> 
+<footer></footer>  
+<script src="index.js"></script>
+<script src="validator.js"></script>
 </body>
 
+</html>
 </html>
