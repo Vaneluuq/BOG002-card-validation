@@ -21,44 +21,91 @@ const multi = cantidadP.value*precioP;
 document.getElementById("valor").innerHTML= "El valor total a pagar es de $ "+ multi + " por favor ingrese la siguiente información para finalizar la compra ";
 }
 
-// Restriccion de letras y espacios 
+// Restriccion de letras y espacios numero de tarjeta  
  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", restriccion);
  function restriccion() {
 const restringirLetras = document.getElementById ("numeroDeTarjeta");
 restringirLetras.value = restringirLetras.value 
 .replace(/\s/g, '')
-.replace(/\D/g, '')
-.replace(/([0-9]{4})/g, '$1 ')
-.trim();
+.replace(/\D/g, '');
 }
 
-//multiplicacion de los numeros pares,aplicamos Luhn 
+// Restriccion de letras y espacios CVC
+document.getElementById ("cvc").addEventListener("keyup", restriccionCodigo);
+function restriccionCodigo() {
+const restringirCodigo = document.getElementById ("cvc");
+restringirCodigo.value = restringirCodigo.value 
+.replace(/\s/g, '')
+.replace(/\D/g, '');
+}
 
-function stringN() {
-    const numeroDeTarjetaInput =  document.getElementById("numeroDeTarjeta").value;
-    let toString  = numeroDeTarjetaInput.toString().split("").reverse();
-    let newArray =  []
-     for ( let i=0; i<toString.length;i++) {
-       if (i % 2 !== 0) {
-        newArray.push (toString[i]*2)    
-      }
-    }
-    console.log (encontrar)
-  }
+function toString () {
+  const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
+  const numeros = numeroDeTarjetaInput.split("").reverse();
+  console.log("aqui el reverso:"+ numeros)
+  let newArray = []
+  for (let i=0;i<numeros.length; i++) {
+    if (i % 2 !== 0) {
+      if (numeros[i]*2 > 9) {
+        newArray.push((numeros[i]*2) - 9)
+         } else
+        newArray.push(numeros[i]*2)
+     }  else {
+        newArray.push(parseInt(numeros[i]))
+   }
+  } console.log (newArray)
   
+}
+ 
+ const botonValidar = document.getElementById ("botonValidar")
+  botonValidar.addEventListener ("click", toString);
+ 
+    
 
-const btnValidar= document.getElementById("botonValidar");
-btnValidar.addEventListener("click", stringN);
+ 
+/*function sumaTotal (acc, val) {
+  return acc + val;
+  }
+   let respuesta = newArray.reduce(sumaTotal, 0);
+   
+   if (respuesta % 10 === 0) {
+     alert ("Tu tarjeta es valida")
+   } else {
+     alert ("Tu tarjeta es invalida")
+   }
+console.log (respuesta)
+}
 
 
 
 
-/*Función para llamar el numero de la tarjeta ingresado*/
 
 
-/*Función para guardar el numero de la tarjeta de crédito*/
-//function getNumeroDeTarjetaInput(){
-  //return numeroDeTarjetaInput.value; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //function isValid() {
  
