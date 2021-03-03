@@ -39,35 +39,28 @@ restringirCodigo.value = restringirCodigo.value
 .replace(/\D/g, '');
 }
 
-function toString () {
+function algoritmoLunh () {
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
   const numeros = numeroDeTarjetaInput.split("").reverse();
-  console.log("aqui el reverso:"+ numeros)
-  let newArray = []
+  let nuevoArray = []
+ //Validacion numeros pares, multiplicación e ingresamos numeros al nuevo array
   for (let i=0;i<numeros.length; i++) {
     if (i % 2 !== 0) {
       if (numeros[i]*2 > 9) {
-        newArray.push((numeros[i]*2) - 9)
+        nuevoArray.push((numeros[i]*2) - 9)
          } else
-        newArray.push(numeros[i]*2)
+        nuevoArray.push(numeros[i]*2)
+  //Ingresamos numeros impares a nuevo array 
      }  else {
-        newArray.push(parseInt(numeros[i]))
+        nuevoArray.push(parseInt(numeros[i]))
    }
-  } console.log (newArray)
-  
-}
- 
- const botonValidar = document.getElementById ("botonValidar")
-  botonValidar.addEventListener ("click", toString);
- 
-    
-
- 
-/*function sumaTotal (acc, val) {
+  }
+  // funcion para sumar todos numeros del nuevo array
+  function sumaTotal (acc, val) {
   return acc + val;
   }
-   let respuesta = newArray.reduce(sumaTotal, 0);
-   
+   let respuesta = nuevoArray.reduce(sumaTotal, 0);
+   // validación multiplos de 10
    if (respuesta % 10 === 0) {
      alert ("Tu tarjeta es valida")
    } else {
@@ -75,7 +68,13 @@ function toString () {
    }
 console.log (respuesta)
 }
+ 
+ const botonValidar = document.getElementById ("botonValidar")
+  botonValidar.addEventListener ("click", algoritmoLunh);
+ 
+    
 
+ 
 
 
 
