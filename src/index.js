@@ -39,6 +39,23 @@ restringirCodigo.value = restringirCodigo.value
 .replace(/\D/g, '');
 }
 
+
+ function maskify () {
+const numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta").value;
+let nuevoString =""
+for (let i=0; i<numeroDeTarjetaDos.length; i++) {
+  if (i > 11){
+    nuevoString += numeroDeTarjetaDos[i];
+    } else {
+    nuevoString += "#";
+  } 
+ } 
+}
+ let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
+ ocultarDigitos.addEventListener("keyup", maskify )  
+
+ 
+//algoritmo Luhn 
 function algoritmoLunh () {
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
   const numeros = numeroDeTarjetaInput.split("").reverse();
@@ -69,20 +86,47 @@ function algoritmoLunh () {
 console.log (respuesta)
 }
  
- const botonValidar = document.getElementById ("botonValidar")
+ let botonValidar = document.getElementById ("botonValidar")
   botonValidar.addEventListener ("click", algoritmoLunh);
  
-    
+  
+  /*const numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta").value;
+  let newArray = numeroDeTarjetaDos.split("").slice(12, 15);
+  //let newString = numeroDeTarjetaDos.toString().split("").substr(0,12);
+  console.log (newArray)
+  //console.log (newString)
+   // for (let i=0; i< newString.length; i++) {}    
+ // let cobernumber = newString + newArray; }
+ }
+
+ let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
+ ocultarDigitos.addEventListener("keydown", maskify)  
+
+
+
 
  
 
-
-
-
-
-
-
-
+/*  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", maskify)
+  function maskify() {
+  const numeroDeTarjetaDos = document.getElementById("numeroDeTarjeta").length;
+  if (numeroDeTarjetaDos>4) {
+    let reverso = numeroDeTarjetaDos.reverse();
+    let nuevoString = "";
+  for (let i=0; i< reverso.length; i++) {
+    if (i < 4){
+      nuevoString += reverso[i];
+    } else {
+      nuevoString += "#";
+    }
+  } return nuevoString.reverse(); 
+  
+} else {
+  return numeroDeTarjetaDos
+}
+ function reverse (str) {
+   return str.split("").reverse().join("")
+ } 
 
 
 
