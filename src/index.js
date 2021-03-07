@@ -39,17 +39,19 @@ restringirCodigo.value = restringirCodigo.value
 .replace(/\D/g, '');
 }
 
-
- function maskify () {
-const numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta").value;
+let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
 let nuevoString =""
-for (let i=0; i<numeroDeTarjetaDos.length; i++) {
-  if (i > 11){
-    nuevoString += numeroDeTarjetaDos[i];
+let numeroValor = ""
+function maskify () {
+//for (let i=0; i<numeroDeTarjetaDos.value.length; i++) {
+  numeroValor +=numeroDeTarjetaDos.value
+  if (numeroValor.length >12){
+    nuevoString += numeroValor.charAt(numeroValor.length-1);
     } else {
-    nuevoString += "#";
+   nuevoString += "#";
   } 
- } 
+ numeroDeTarjetaDos.value = nuevoString
+ console.log(numeroValor, nuevoString)
 }
  let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
  ocultarDigitos.addEventListener("keyup", maskify )  
