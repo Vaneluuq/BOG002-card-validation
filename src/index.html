@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-BOOK</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
     <div id="encabezado" class="encabezado">
-        <a href="index.html"><img src="imagenes/ebookimage.jpg" alt="imagen1" class="imagen1"></a>
+        <span class="imagenLogo"><a href="index.html"><img src="imagenes/foto-logo.png" alt="imagenLogo" class="imagenLogo" width="150"></a>
+        </span>
         <nav>
         <a href="#inicio">INICIO</a> 
         <a href="#libreria">LIBRERIA</a> 
-        <a href="#contacto">CONTÁCTENOS</a>
+        <a href="#contacto">Chatea con nosotros</a>
         </nav>
     </div>
 </header>
@@ -23,35 +26,61 @@
     <section id="contenedor" class="contenedor">
         <img src="imagenes/compraebook.jpg" alt="imagen2" class="imagen2">
         <div class="bloque-contenedor">
-           <h1 id="titulo" class="titulo">E-book Lectura Rapida para toda la Familia</h1> <hr>
-           <h2 id="parrafo1" class="parrafo1">Tipo de publicacion: publicacion digital <br>
+            <br>
+           <h1 id="titulo" class="titulo">¿Listx para sacarle provecho al tiempo?</h1><br>
+           <h2 id="titulo2" class="titulo2">Lectura rapida en 63 días </h2><br> <hr> <br> <br>
+           <h3 id="parrafo1" class="parrafo1">Tipo de publicación: Digital <br>
+            Autor: Anthony Rowsbell. <br> 
             Editorial: Mdios Editores S.A <br>
-            Numero de paginas: 123</h2> <hr>
-            <h3>Precio: $15000</h3>
-           <h3 id="parrafo2">Productos a tu carro:</h3>    
+            Número de paginas: 185</h3><br><br> <hr>
+            <br>
+            <h3>Valor: $ 15000</h3>
+           <h3 id="parrafo2">Productos a tu carro:</h3>
+           <br> 
            <input type="number" id="cantidadProductos" min="1" max="99" > 
            <input class="boton" type="button" value="Pagar" id="pagar">
+           <br>
+           <br>
         </div>
     </section>
     <br>
     <br>
+    
     <section class="form" id="form">
+        <div id="valorMultiplicacion"></div>
+        <br>
         <p id="valor"></p>
+        <br>
         <div class="bloque-tarjeta">
-            <label for="numeroDeTarjeta">Numero de Tarjeta</label><br>
-            <input type="text" id="numeroDeTarjeta" placeholder="número de tarjeta" maxlength="16"><br>
-            <label for="nombre">Nombre en la tarjeta</label><br>  
-            <input type="text" id="nombre" placeholder="Nombre" autocomplete="off"><br>
-            <label for="fechaV">Fecha Vencimiento</label><br>
-            <input type="date" id="fechaV"><br>
-            <label for="cvc">Codigo de seguridad</label><br>  
-            <input type="text" id="cvc"  placeholder="CVC" maxlength="3"><br>
-            <button type="submit" class="botonValidar" id="botonValidar">Verificar</button><br>
+            <label for="numeroDeTarjeta">Número de tarjeta</label>
+            <input type="text" required id="numeroDeTarjeta" class="formularioInput" placeholder="---- ---- ---- ----" maxlength="16">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Nombre en tarjeta" class="formularioInput" autocomplete="off"><br>
+            <label for="fechaV">Fecha vencimiento</label>
+            <input type="date" id="fechaV" class="formularioInput"><br>
+            <label for="cvc">Código de seguridad</label>
+            <input type="text" id="cvc"  placeholder="CVC" maxlength="3" class="formularioInput"><br><br>
+            <button type="submit" class="botonValidar" id="botonValidar">Verificar</button><br><br>
+            <p id="respuestaValidacion">
+                <div><span style="color:rgb(2, 70, 158)">.......</span></div>
+            </p>
         </div>
-        <p id="respuestaValidacion"></p>
+        
     </section>
+    <br>
+    <br>
 </main>
-<footer></footer>  
+<footer>
+    <nav class="containerFooter">
+        <a href="http://www.facebook.com" target="_blank"> <img src="imagenes/fbk-icon.png" width="35px"  class="redes"> </a> 
+        <a href="http://www.instagram.com" ><img src="imagenes/insta-icon.png" width="43px"  class="redes"></a> 
+    </nav>
+    <p class="texto-derechos-reservados">&copy;®Todos los derechos reservados Ebooklic <br>
+        Carrera 33 # 5-52 Bogotá-Colombia <br>
+        Línea nacional: 01-8000565859
+    </p>
+
+</footer>  
 <script src="index.js" type="module"></script>
 
 </body>

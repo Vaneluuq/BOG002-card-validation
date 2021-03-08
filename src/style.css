@@ -1,5 +1,23 @@
+*{ margin:0;
+    padding:0;
+    list-style:none;
+    text-decoration:none;
+    font-size: small;
+    font-family: 'Roboto', sans-serif;
+    
+ }
+ 
+ 
+ a{
+     text-decoration: none;
+ }
+
+ ul{
+     list-style: none;
+ }
+
 header{
-    background-color: rgb(198, 238, 182);
+    background-color: rgb(92, 174, 241);
     padding: 5px 0px; 
     
 }
@@ -17,33 +35,22 @@ header .encabezado {
     align-items: center;
 }
 
-header .encabezado .imagen1 {
-    width: 50px;
-}
 
 header .encabezado a {
-    color: black;
-    margin: 0 15px;
+    color: rgb(255, 255, 255);
+    margin: 0 20px;
     text-decoration: none;
+    padding-left: 100px;
+    padding-right: 50px; 
 }
 
-a {
-    display: inline-block;
-}
 
-.encabezado {
-    width: 1140px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px; 
-
-}
 h1 {
-    font-size: 28px;
+    font-size: 26px;
 }
 .parrafo1{
-    color: rgb(83, 128, 114);
-    font-size: 20px;
+    color: rgb(47, 76, 107);
+    font-size: 18px;
 }
 
 .form {
@@ -52,14 +59,8 @@ h1 {
 
 .imagen2{
     right: 10%;
-    border-radius: 20px;
-    width: 35%;
+    width: 30%;
     display: block;
-}
-
-#encabezado .imagen1{
-    width: 10%;
-    object-fit: contain;
 }
 
 #contenedor {
@@ -67,7 +68,7 @@ h1 {
     padding-left: 50px;
     padding-top: 20px;
     justify-content: space-evenly;
-    margin: 15kkkkkpx;
+    margin: 15px;
 }
 
 #contenedor .bloque-contenedor {
@@ -77,6 +78,7 @@ h1 {
     background-color: white;
     position: relative;   
     padding: 20px 20px;
+    border-radius: 10px;;
 }
 
 #contenedor .bloque-contenedor::after {
@@ -85,14 +87,105 @@ h1 {
     left: 0px;
     right: 0px;
     content:" ";
-    background: #5A3F37;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #76b9d8, #90a1fc);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4195bd, #afaaf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100%;
     width: 100%;
     filter: blur(20px);
     z-index:-1;
 }
+
+#form .bloque-tarjeta {
+    position: relative;
+    background-color: rgba(192, 201, 211, 0.281);
+    max-width: 180px;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: hidden;
+    color: #373b3b;
+}
+
+#botonValidar {
+    position: absolute;
+    left: 30%;
+    border: 0;
+    background: #12A2F3;
+    border: #777b7e;
+    padding: 5px;
+    color: white;
+    margin: 1px 0;
+    width:auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    text-shadow: 1px 1px 1px #5e6266;
+}
+
+#form #valor{
+    position: absolute;
+    left: 400px;
+}
+
+#form #valorMultiplicacion{
+    position: absolute;
+    left: 550px;
+}
+
+
+footer{
+    width: 100%;
+    height: 65px; 
+    background-color: rgb(134, 134, 134);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+footer .containerFooter a {
+    color: rgb(255, 255, 255);
+    margin: 100px;
+}
+
+footer .texto-derechos-reservados {
+    color: rgb(255, 255, 255);
+    margin: 25px;
+    text-decoration: none;
+    padding-left: 320px;
+    padding-right: 45px;
+
+}
+
+.formularioInput{
+    background: rgba(174, 218, 253, 0.6);
+	border: none;
+	outline: none;
+	border-bottom: 2px solid rgb(92, 174, 241);
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 2px;
+	font-size: 14px;
+	color: rgb(173, 173, 173);
+}
+
+
+
+.imagenLogo{
+    size: 15px 15px;
+    margin-top: 10px;
+}
+
+.titulo2{
+    font-size: 16px;
+}
+
+.titulo{
+    font-size: 25px;
+    color: rgb(61, 63, 66);
+}
+
 
 
 

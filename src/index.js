@@ -18,7 +18,9 @@ const btnCalcular = document.getElementById("pagar");
 btnCalcular.addEventListener("click", valorTotal);
 function valorTotal () {
 const multi = cantidadP.value*precioP;
-document.getElementById("valor").innerHTML= "El valor total a pagar es de $ "+ multi + " por favor ingrese la siguiente información para finalizar la compra ";
+document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ multi; 
+
+document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
 }
 
 // Restriccion de letras y espacios numero de tarjeta  
@@ -69,14 +71,44 @@ function algoritmoLunh () {
 console.log (respuesta)
 }
  
- const botonValidar = document.getElementById ("botonValidar")
+const botonValidar = document.getElementById ("botonValidar")
   botonValidar.addEventListener ("click", algoritmoLunh);
  
-    
+ /*   
+ function Maskify(){
+ let lastDigits = document.getElementById ("numeroDetarjeta").slice(-4).value;
+ let maskedString = lastDigits.padStart(12,"#");
 
- 
+}
 
 
+.repeat*/
+/*const campoNumeros = document.getElementById ("numeroDeTarjeta")
+  campoNumeros.addEventListener ('keydown', ocultarNumeros);
+/*document.getElementById("numeroDeTarjeta").addEventListener("keyUp", ocultarNumeros);*/
+/*function ocultarNumeros () { */
+  /*const numerosIngresados = document.getElementById("numeroDeTarjeta").value;
+    let numeroDeTarjetaArray = Array.from(numerosIngresados); // Array 1
+    /*console.log(numeroDeTarjetaArray)*/
+   /* let lengthNumeros = numerosIngresados.length;/*
+    let lastFour = numerosIngresados.slice(-4); // Array 2
+    let newArray = []; // Array 3
+  if (lengthNumeros <= 4) {
+      return numerosIngresados;
+
+   }  else if (lengthNumeros > 4) {
+      let index = lengthNumeros - 4;
+      numeroDeTarjetaArray.splice(index, 4);
+      // Loop 1
+      numeroDeTarjetaArray.forEach(n => {
+          newArray.push('#');
+          return newArray;
+      });
+      // Loop 2
+      return newArray.concat(lastFour).join(''); 
+      // Array 4
+    } 
+}
 
 
 
