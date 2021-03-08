@@ -41,6 +41,25 @@ restringirCodigo.value = restringirCodigo.value
 .replace(/\D/g, '');
 }
 
+let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
+let nuevoString =""
+let numeroValor = ""
+function maskify () {
+//for (let i=0; i<numeroDeTarjetaDos.value.length; i++) {
+  numeroValor +=numeroDeTarjetaDos.value
+  if (numeroValor.length >12){
+    nuevoString += numeroValor.charAt(numeroValor.length-1);
+    } else {
+   nuevoString += "#";
+  } 
+ numeroDeTarjetaDos.value = nuevoString
+ console.log(numeroValor, nuevoString)
+}
+ let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
+ ocultarDigitos.addEventListener("keyup", maskify )  
+
+ 
+//algoritmo Luhn 
 function algoritmoLunh () {
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
   const numeros = numeroDeTarjetaInput.split("").reverse();
@@ -71,6 +90,7 @@ function algoritmoLunh () {
 console.log (respuesta)
 }
  
+<<<<<<< HEAD
 const botonValidar = document.getElementById ("botonValidar")
   botonValidar.addEventListener ("click", algoritmoLunh);
  
@@ -109,12 +129,49 @@ const botonValidar = document.getElementById ("botonValidar")
       // Array 4
     } 
 }
+=======
+ let botonValidar = document.getElementById ("botonValidar")
+  botonValidar.addEventListener ("click", algoritmoLunh);
+ 
+  
+  /*const numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta").value;
+  let newArray = numeroDeTarjetaDos.split("").slice(12, 15);
+  //let newString = numeroDeTarjetaDos.toString().split("").substr(0,12);
+  console.log (newArray)
+  //console.log (newString)
+   // for (let i=0; i< newString.length; i++) {}    
+ // let cobernumber = newString + newArray; }
+ }
+>>>>>>> 84dfc8578c526b59dbba4ea3060f3a4121e416aa
+
+ let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
+ ocultarDigitos.addEventListener("keydown", maskify)  
 
 
 
 
+ 
 
-
+/*  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", maskify)
+  function maskify() {
+  const numeroDeTarjetaDos = document.getElementById("numeroDeTarjeta").length;
+  if (numeroDeTarjetaDos>4) {
+    let reverso = numeroDeTarjetaDos.reverse();
+    let nuevoString = "";
+  for (let i=0; i< reverso.length; i++) {
+    if (i < 4){
+      nuevoString += reverso[i];
+    } else {
+      nuevoString += "#";
+    }
+  } return nuevoString.reverse(); 
+  
+} else {
+  return numeroDeTarjetaDos
+}
+ function reverse (str) {
+   return str.split("").reverse().join("")
+ } 
 
 
 
