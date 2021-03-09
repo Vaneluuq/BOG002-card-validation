@@ -186,6 +186,53 @@ footer .texto-derechos-reservados {
     color: rgb(61, 63, 66);
 }
 
+.overlay {
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
 
+}.overlay.active {
+    visibility: visible;
+}
+
+
+.popup {
+    background-color:  cornsilk;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,3);
+    border-radius: 3px;
+    padding: 20px;
+    width: 300px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popup .validacionTarjeta {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.popup .cerrarPopup {
+    padding: 0px 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color:rgb(245, 245, 245);
+    background: rgb(31, 107, 168);
+    cursor: pointer;
+    transition: .3s ease all;
+}
 
 

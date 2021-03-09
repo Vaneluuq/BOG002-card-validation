@@ -41,23 +41,6 @@ restringirCodigo.value = restringirCodigo.value
 .replace(/\D/g, '');
 }
 
-let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
-let nuevoString =""
-let numeroValor = ""
-function maskify () {
-//for (let i=0; i<numeroDeTarjetaDos.value.length; i++) {
-  numeroValor +=numeroDeTarjetaDos.value
-  if (numeroValor.length >12){
-    nuevoString += numeroValor.charAt(numeroValor.length-1);
-    } else {
-   nuevoString += "#";
-  } 
- numeroDeTarjetaDos.value = nuevoString
- console.log(numeroValor, nuevoString)
-}
- let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
- ocultarDigitos.addEventListener("keyup", maskify )  
-
  
 //algoritmo Luhn 
 function algoritmoLunh () {
@@ -83,130 +66,79 @@ function algoritmoLunh () {
    let respuesta = nuevoArray.reduce(sumaTotal, 0);
    // validación multiplos de 10
    if (respuesta % 10 === 0) {
-     alert ("Tu tarjeta es valida")
-   } else {
+    function popUpVisible() {
+      let overlay = document.getElementById("overlay")
+      overlay.classList.add("active");
+     }
+    } else {
      alert ("Tu tarjeta es invalida")
    }
-console.log (respuesta)
-}
- 
-<<<<<<< HEAD
-const botonValidar = document.getElementById ("botonValidar")
-  botonValidar.addEventListener ("click", algoritmoLunh);
- 
- /*   
- function Maskify(){
- let lastDigits = document.getElementById ("numeroDetarjeta").slice(-4).value;
- let maskedString = lastDigits.padStart(12,"#");
+  }
 
-}
-
-
-.repeat*/
-/*const campoNumeros = document.getElementById ("numeroDeTarjeta")
-  campoNumeros.addEventListener ('keydown', ocultarNumeros);
-/*document.getElementById("numeroDeTarjeta").addEventListener("keyUp", ocultarNumeros);*/
-/*function ocultarNumeros () { */
-  /*const numerosIngresados = document.getElementById("numeroDeTarjeta").value;
-    let numeroDeTarjetaArray = Array.from(numerosIngresados); // Array 1
-    /*console.log(numeroDeTarjetaArray)*/
-   /* let lengthNumeros = numerosIngresados.length;/*
-    let lastFour = numerosIngresados.slice(-4); // Array 2
-    let newArray = []; // Array 3
-  if (lengthNumeros <= 4) {
-      return numerosIngresados;
-
-   }  else if (lengthNumeros > 4) {
-      let index = lengthNumeros - 4;
-      numeroDeTarjetaArray.splice(index, 4);
-      // Loop 1
-      numeroDeTarjetaArray.forEach(n => {
-          newArray.push('#');
-          return newArray;
-      });
-      // Loop 2
-      return newArray.concat(lastFour).join(''); 
-      // Array 4
-    } 
-}
-=======
- let botonValidar = document.getElementById ("botonValidar")
-  botonValidar.addEventListener ("click", algoritmoLunh);
- 
+   
   
-  /*const numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta").value;
-  let newArray = numeroDeTarjetaDos.split("").slice(12, 15);
-  //let newString = numeroDeTarjetaDos.toString().split("").substr(0,12);
-  console.log (newArray)
-  //console.log (newString)
-   // for (let i=0; i< newString.length; i++) {}    
- // let cobernumber = newString + newArray; }
- }
->>>>>>> 84dfc8578c526b59dbba4ea3060f3a4121e416aa
 
- let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
- ocultarDigitos.addEventListener("keydown", maskify)  
+//let validacionTarjeta = document.getElementById ("validacionTarjeta")
+//validacionTarjeta.innerHTML(nuevoString)
 
+//maskify 
 
-
-
- 
-
-/*  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", maskify)
-  function maskify() {
-  const numeroDeTarjetaDos = document.getElementById("numeroDeTarjeta").length;
-  if (numeroDeTarjetaDos>4) {
-    let reverso = numeroDeTarjetaDos.reverse();
-    let nuevoString = "";
-  for (let i=0; i< reverso.length; i++) {
-    if (i < 4){
-      nuevoString += reverso[i];
+let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
+let nuevoString =""
+let numeroValor = ""
+function maskify () {
+  numeroValor +=numeroDeTarjetaDos.value
+  if (numeroValor.length >12){
+    nuevoString += numeroValor.charAt(numeroValor.length-1);
     } else {
+   nuevoString += "#";
+  } 
+  numeroDeTarjetaDos.value = nuevoString
+}
+
+let botonValidar = document.getElementById ("botonValidar")
+botonValidar.addEventListener ("click", algoritmoLunh);
+
+
+
+
+ /*let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
+   let nuevoString =""
+   let numeroValor = ""
+   function maskify () {
+     numeroValor +=numeroDeTarjetaDos.value
+     if (numeroValor.length >12){
+       nuevoString += numeroValor.charAt(numeroValor.length-1);
+       } else {
       nuevoString += "#";
-    }
-  } return nuevoString.reverse(); 
-  
-} else {
-  return numeroDeTarjetaDos
-}
- function reverse (str) {
-   return str.split("").reverse().join("")
- } 
+     } 
+     numeroDeTarjetaDos.value = nuevoString
+   console.log (nuevoString, numeroValor)
+   
+   }
+    let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
+    ocultarDigitos.addEventListener("keyup", maskify)
+    
+    
+    
+    
+    let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
+let nuevoString =""
+let numeroValor = ""
+function maskify () {
+  numeroValor +=numeroDeTarjetaDos.value
+  if (numeroValor.length >12){
+    nuevoString += numeroValor.charAt(numeroValor.length-1);
+    } else {
+   nuevoString += "#";
+  } 
+  numeroDeTarjetaDos.value = nuevoString
+console.log (nuevoString, numeroValor)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//function isValid() {
- 
-//}
-//const numero= 2
-
-/*function isValid() {
-  const numeroDeTarjetaInput =  document.getElementById("numeroDeTarjeta").value;
-  const rest = numeroDeTarjetaInput * numero;
-  document.getElementById("respuestaValidacion").innerHTML= "no y si " + rest;
-}
-
-const btnValidar= document.getElementById("botonValidar");
-btnValidar.addEventListener("click", isValid)
-
-const multiplicacionP = numeroDeTarjetaInput.toString().split("").map(Number);*/
+let overlay = document.getElementById("overlay")
+    let popUp = document.getElementById("popup")
+    let validacionTarjeta =document.getElementById ("validacionTarjeta");
+      */
