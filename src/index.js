@@ -2,8 +2,8 @@ import validator from "./validator.js";
 
 //pasamos a la siguiente pagina ocultando el contenido anterior
 document.getElementById("pagar").addEventListener("click", comenzar);
-function comenzar() {
-ocultarMostrar("form","contenedor");
+  function comenzar() {
+    ocultarMostrar("form","contenedor");
 }
 function ocultarMostrar (pantallaEncendida , pantallaApagada){
     document.getElementById(pantallaApagada).style.display = "none";
@@ -12,42 +12,42 @@ function ocultarMostrar (pantallaEncendida , pantallaApagada){
 
 
 // calculamos valor a pagar del producto y agregamos el evento
-
 const btnCalcular = document.getElementById("pagar")
-btnCalcular.addEventListener("click", valorTotal())
-function valorTotal() {
-let cantidadP= document.getElementById("cantidadProductos").value;
-document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ validator.valorTotal(cantidadP); 
-document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
+  btnCalcular.addEventListener("click", valorTotal())
+    function valorTotal() {
+      let cantidadP= document.getElementById("cantidadProductos").value;
+      document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ validator.valorTotal(cantidadP); 
+      document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
 }
+
 
 // Restriccion de letras y espacios numero de tarjeta  
  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", restriccion);
- function restriccion() {
-const restringirLetras = document.getElementById("numeroDeTarjeta");
-restringirLetras.value = restringirLetras.value 
-.replace(/\s/g, '')
-.replace(/\D/g, '');
+  function restriccion() {
+   const restringirLetras = document.getElementById("numeroDeTarjeta");
+   restringirLetras.value = restringirLetras.value 
+    .replace(/\s/g, '')
+    .replace(/\D/g, '');
 }
 
 
 // Restriccion de letras y espacios CVC
 document.getElementById ("cvc").addEventListener("keyup", restriccionCodigo);
-function restriccionCodigo() {
-const restringirCodigo = document.getElementById ("cvc");
-restringirCodigo.value = restringirCodigo.value 
-.replace(/\s/g, '')
-.replace(/\D/g, '');
+  function restriccionCodigo() {
+   const restringirCodigo = document.getElementById ("cvc");
+   restringirCodigo.value = restringirCodigo.value 
+     .replace(/\s/g, '')
+     .replace(/\D/g, '');
 }
 
  
 //algoritmo Luhn 
 function isValid () {
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
-   if (validator.isValid(numeroDeTarjetaInput) == true) {
-    let overlay = document.getElementById("overlay");
-    overlay.classList.add("active");
-    document.getElementById ("validacionTarjeta").innerHTML= validator.maskify(numeroDeTarjetaInput)
+    if (validator.isValid(numeroDeTarjetaInput) == true) {
+      let overlay = document.getElementById("overlay");
+      overlay.classList.add("active");
+      document.getElementById ("validacionTarjeta").innerHTML= validator.maskify(numeroDeTarjetaInput)
   } else {
      alert ("Tu tarjeta es invalida")
   } 
@@ -55,36 +55,10 @@ function isValid () {
   const botonValidar = document.getElementById ("botonValidar")
   botonValidar.addEventListener ("click", isValid)
 
+
   
-
-
-/*document.getElementById("cerrarPopup")
+// agregamos evento al boton cerrar del popup
+document.getElementById("cerrarPopup")
 cerrarPopup.addEventListener("click", paginaPrincipal())
 function paginaPrincipal() {
-  mostrarOcultar("overlay", "contenedor");
 }
-function mostrarOcultar(pantallaOn, pantallaOff) {
-  document.getElementById(pantallaOff).style.display = "none";
-  document.getElementById(pantallaOn).syle.display = "inline"
-}
-
-
-  
-  //  let numeroCubrir = nuevoString;
-    //let validacionTarjeta = document.getElementById("validacionTarjeta")
-    //validacionTarjeta.document.getElementById(numeroCubrir).innerHTML = "hola mundo"}
-
-  /*function mostrarMaskify () {
-    let validacionTarjeta = document.getElementById ("validacionTarjeta")
-    validacionTarjeta.innerHTML(nuevoString)
-    if (overlay)
-  }
-  
-  onst cerrarPopup = document.getElementById ("cerrarPopup")
-cerrarPopup.addEventListener("click", paginaPrincipal() {
-  document.getElementById("contenedor")
-});
-
-  
-  */
-  

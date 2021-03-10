@@ -1,19 +1,18 @@
-
 const validator = {
 //algoritmo de Luhn 
  isValid:function(numeroDeTarjetaInput){
-        const numeros = numeroDeTarjetaInput.split("").reverse();
-        let nuevoArray = []
+    const numeros = numeroDeTarjetaInput.split("").reverse();
+    let nuevoArray = []
     //Validacion numeros pares, multiplicación e ingresamos numeros al nuevo array
   for (let i=0;i<numeros.length; i++) {
     if (i % 2 !== 0) {
-      if (numeros[i]*2 > 9) {
-        nuevoArray.push((numeros[i]*2) - 9)
-         } else
-        nuevoArray.push(numeros[i]*2)
+       if (numeros[i]*2 > 9) {
+         nuevoArray.push((numeros[i]*2) - 9)
+     } else
+         nuevoArray.push(numeros[i]*2)
   //Ingresamos numeros impares a nuevo array 
-     }  else {
-        nuevoArray.push(parseInt(numeros[i]))
+ }  else {
+       nuevoArray.push(parseInt(numeros[i]))
    }
   }
   // funcion para sumar todos numeros del nuevo array
@@ -21,7 +20,7 @@ const validator = {
   return acc + val;
   }
    let respuesta = nuevoArray.reduce(sumaTotal, 0);
-  
+  //validacion 
    if (respuesta % 10 === 0) { 
        return true; }
        else  {
@@ -36,6 +35,7 @@ maskify: function(numeroValor){
       return nuevoString;
      },
 
+// funcion valor total para multiplicar el valor del producto por su cantidad 
 valorTotal: function(cantidadP) {
     const precioProducto= 15000
     let multiplicacionValor = cantidadP*precioProducto
