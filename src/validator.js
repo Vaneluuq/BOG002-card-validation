@@ -1,2 +1,9 @@
+//const validator = {
+    //isValid:function (numeroDeTarjeta) { //
 
-//export default validator;
+  //  }
+
+
+
+
+//}//

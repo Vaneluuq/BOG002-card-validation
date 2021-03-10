@@ -1,4 +1,4 @@
-//import validator from "./validator.js";
+//import validator from "./validator.js";//
 
 //pasamos a la siguiente pagina ocultando el contenido anterior
 document.getElementById("pagar").addEventListener("click", comenzar);
@@ -84,7 +84,6 @@ function algoritmoLunh () {
   
 
 
-
 //maskify 
 
 let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
@@ -93,11 +92,12 @@ let numeroValor = ""
 function maskify () {
   numeroValor +=numeroDeTarjetaDos.value
   if (numeroValor.length >12){
-    nuevoString += numeroValor.charAt(numeroValor.length-1);
+    nuevoString += numeroValor.charAt(numeroValor.length -1);
     } else {
    nuevoString += "#";
   } 
   numeroDeTarjetaDos.value = nuevoString
+  
 }
 
 let botonValidar = document.getElementById ("botonValidar")
