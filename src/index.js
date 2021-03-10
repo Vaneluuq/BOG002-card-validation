@@ -1,76 +1,60 @@
+<<<<<<< HEAD
 //import validator from "./validator.js";//
+=======
+import validator from "./validator.js";
+>>>>>>> bda5aec4b895392f00c52382909b6a5e4f1d3ac1
 
 //pasamos a la siguiente pagina ocultando el contenido anterior
 document.getElementById("pagar").addEventListener("click", comenzar);
-function comenzar() {
-ocultarMostrar("form","contenedor");
+  function comenzar() {
+    ocultarMostrar("form","contenedor");
 }
 function ocultarMostrar (pantallaEncendida , pantallaApagada){
     document.getElementById(pantallaApagada).style.display = "none";
     document.getElementById(pantallaEncendida).style.display = "inline";
 }
 
+
 // calculamos valor a pagar del producto y agregamos el evento
-const cantidadP= document.getElementById("cantidadProductos");
-const precioP = 15000;
-const btnCalcular = document.getElementById("pagar");
-
-btnCalcular.addEventListener("click", valorTotal);
-function valorTotal () {
-const multi = cantidadP.value*precioP;
-document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ multi; 
-
-document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
+const btnCalcular = document.getElementById("pagar")
+  btnCalcular.addEventListener("click", valorTotal())
+    function valorTotal() {
+      let cantidadP= document.getElementById("cantidadProductos").value;
+      document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ validator.valorTotal(cantidadP); 
+      document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
 }
+
 
 // Restriccion de letras y espacios numero de tarjeta  
  document.getElementById ("numeroDeTarjeta").addEventListener("keyup", restriccion);
- function restriccion() {
-const restringirLetras = document.getElementById ("numeroDeTarjeta");
-restringirLetras.value = restringirLetras.value 
-.replace(/\s/g, '')
-.replace(/\D/g, '');
+  function restriccion() {
+   const restringirLetras = document.getElementById("numeroDeTarjeta");
+   restringirLetras.value = restringirLetras.value 
+    .replace(/\s/g, '')
+    .replace(/\D/g, '');
 }
+
 
 // Restriccion de letras y espacios CVC
 document.getElementById ("cvc").addEventListener("keyup", restriccionCodigo);
-function restriccionCodigo() {
-const restringirCodigo = document.getElementById ("cvc");
-restringirCodigo.value = restringirCodigo.value 
-.replace(/\s/g, '')
-.replace(/\D/g, '');
+  function restriccionCodigo() {
+   const restringirCodigo = document.getElementById ("cvc");
+   restringirCodigo.value = restringirCodigo.value 
+     .replace(/\s/g, '')
+     .replace(/\D/g, '');
 }
 
  
 //algoritmo Luhn 
-function algoritmoLunh () {
+function isValid () {
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
-  const numeros = numeroDeTarjetaInput.split("").reverse();
-  let nuevoArray = []
- //Validacion numeros pares, multiplicación e ingresamos numeros al nuevo array
-  for (let i=0;i<numeros.length; i++) {
-    if (i % 2 !== 0) {
-      if (numeros[i]*2 > 9) {
-        nuevoArray.push((numeros[i]*2) - 9)
-         } else
-        nuevoArray.push(numeros[i]*2)
-  //Ingresamos numeros impares a nuevo array 
-     }  else {
-        nuevoArray.push(parseInt(numeros[i]))
-   }
-  }
-  // funcion para sumar todos numeros del nuevo array
-  function sumaTotal (acc, val) {
-  return acc + val;
-  }
-   let respuesta = nuevoArray.reduce(sumaTotal, 0);
-   // validación multiplos de 10
-   if (respuesta % 10 === 0) {
-    let overlay = document.getElementById("overlay");
-    overlay.classList.add("active");
-    }
-     else {
+    if (validator.isValid(numeroDeTarjetaInput) == true) {
+      let overlay = document.getElementById("overlay");
+      overlay.classList.add("active");
+      document.getElementById ("validacionTarjeta").innerHTML= validator.maskify(numeroDeTarjetaInput)
+  } else {
      alert ("Tu tarjeta es invalida")
+<<<<<<< HEAD
    }
   }
 
@@ -98,51 +82,17 @@ function maskify () {
   } 
   numeroDeTarjetaDos.value = nuevoString
   
-}
-
-let botonValidar = document.getElementById ("botonValidar")
-botonValidar.addEventListener ("click", algoritmoLunh);
-
-
-
-
- /*let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
-   let nuevoString =""
-   let numeroValor = ""
-   function maskify () {
-     numeroValor +=numeroDeTarjetaDos.value
-     if (numeroValor.length >12){
-       nuevoString += numeroValor.charAt(numeroValor.length-1);
-       } else {
-      nuevoString += "#";
-     } 
-     numeroDeTarjetaDos.value = nuevoString
-   console.log (nuevoString, numeroValor)
-   
-   }
-    let ocultarDigitos= document.getElementById ("numeroDeTarjeta")
-    ocultarDigitos.addEventListener("keyup", maskify)
-    
-    
-    
-    
-    let numeroDeTarjetaDos= document.getElementById("numeroDeTarjeta");
-let nuevoString =""
-let numeroValor = ""
-function maskify () {
-  numeroValor +=numeroDeTarjetaDos.value
-  if (numeroValor.length >12){
-    nuevoString += numeroValor.charAt(numeroValor.length-1);
-    } else {
-   nuevoString += "#";
+=======
   } 
-  numeroDeTarjetaDos.value = nuevoString
-console.log (nuevoString, numeroValor)
+>>>>>>> bda5aec4b895392f00c52382909b6a5e4f1d3ac1
+}
+  const botonValidar = document.getElementById ("botonValidar")
+  botonValidar.addEventListener ("click", isValid)
 
 
-
-
-let overlay = document.getElementById("overlay")
-    let popUp = document.getElementById("popup")
-    let validacionTarjeta =document.getElementById ("validacionTarjeta");
-      */
+  
+// agregamos evento al boton cerrar del popup
+document.getElementById("cerrarPopup")
+cerrarPopup.addEventListener("click", paginaPrincipal())
+function paginaPrincipal() {
+}
