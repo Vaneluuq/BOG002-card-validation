@@ -66,20 +66,24 @@ function algoritmoLunh () {
    let respuesta = nuevoArray.reduce(sumaTotal, 0);
    // validación multiplos de 10
    if (respuesta % 10 === 0) {
-    function popUpVisible() {
-      let overlay = document.getElementById("overlay")
-      overlay.classList.add("active");
-     }
-    } else {
+    let overlay = document.getElementById("overlay");
+    overlay.classList.add("active");
+    }
+     else {
      alert ("Tu tarjeta es invalida")
    }
   }
 
+  /*function mostrarMaskify () {
+    let validacionTarjeta = document.getElementById ("validacionTarjeta")
+    validacionTarjeta.innerHTML(nuevoString)
+    if (overlay)
+  }*/
+  
    
   
 
-//let validacionTarjeta = document.getElementById ("validacionTarjeta")
-//validacionTarjeta.innerHTML(nuevoString)
+
 
 //maskify 
 
