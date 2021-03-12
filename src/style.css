@@ -6,19 +6,22 @@
     font-family: 'Roboto', sans-serif;
 }
  
+
  a{
      text-decoration: none;
- }
+}
+
 
  ul{
      list-style: none;
- }
+}
+
 
 header{
     background-color: rgb(92, 174, 241);
-    padding: 5px 0px; 
-    
+    padding: 5px 0px;    
 }
+
 
 body {
     margin: 0;
@@ -86,8 +89,22 @@ footer h3 {
 footer .barra-footer {
     background-color: rgb(228, 220, 220);
     text-align: center;
-    padding-bottom: 1%;
-    padding-top: 1%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+footer .redesFbk{
+    display: flex;
+    padding-left: 200px;
+    padding-top: 4px;
+    padding-bottom: 0;    
+}
+
+
+footer .redesIg{
+    display: flex;
+    padding-left: 195px;  
 }
 
 
@@ -150,8 +167,8 @@ footer .barra-footer {
     align-items: center;
     justify-content: center;
     visibility: hidden;
-
 }
+
 
 .overlay.active {
     visibility: visible;
@@ -193,8 +210,7 @@ footer .barra-footer {
     background: rgb(92, 174, 241);
     cursor: pointer;
     transition: .3s ease all;
-    border-radius: 5px;
-    
+    border-radius: 5px;   
 }
 
 
@@ -279,6 +295,5 @@ footer .barra-footer {
     padding: 3px;
     border: #777b7e;
     color: white;
-    border-radius: 3px;
-    
+    border-radius: 3px;   
 }

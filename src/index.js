@@ -49,7 +49,7 @@ function isValid () {
       overlay.classList.add("active");
       document.getElementById ("validacionTarjeta").innerHTML= validator.maskify(numeroDeTarjetaInput)
     } else {
-      let nombreCliente= document.getElementById("nombre").value
+      let nombreCliente = document.getElementById("nombreCliente").value
        alert (nombreCliente +" su tarjeta es invalida por favor intentelo nuevamente")
       } 
 }
