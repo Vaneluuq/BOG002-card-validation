@@ -53,15 +53,17 @@
         <p id="valor"></p>
         <br>
         <div class="bloque-tarjeta">
-            <label for="numeroDeTarjeta">Número de tarjeta</label>
-            <input type="text" id="numeroDeTarjeta" class="formularioInput" placeholder="---- ---- ---- ----" maxlength="16">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombreCliente" placeholder="Nombre en tarjeta" class="formularioInput" autocomplete="off"><br>
-            <label for="fechaV">Fecha vencimiento</label>
-            <input type="date" id="fechaV" class="formularioInput"><br>
-            <label for="cvc">Código de seguridad</label>
-            <input type="text" id="cvc"  placeholder="CVC" maxlength="3" class="formularioInput"><br><br>
-            <button class="botonValidar" id="botonValidar">Verificar</button><br><br>
+            <form id="formulario" action="">
+                <label for="numeroDeTarjeta">Número de tarjeta</label>
+                <input type="text" id="numeroDeTarjeta" class="formularioInput" placeholder="---- ---- ---- ----" maxlength="16" required>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombreCliente" placeholder="Nombre en tarjeta" class="formularioInput" autocomplete="off" required><br>
+                <label for="fechaV">Fecha vencimiento</label>
+                <input type="date" id="fechaV" class="formularioInput"><br>
+                <label for="cvc">Código de seguridad</label>
+                <input type="text" id="cvc"  placeholder="CVC" maxlength="3" class="formularioInput"><br><br>
+                <button type="submit" class="botonValidar" id="botonValidar">Verificar</button><br><br>
+            </form>
         </div>
         <div class="overlay" id="overlay">
             <div class="popup" id="popup">

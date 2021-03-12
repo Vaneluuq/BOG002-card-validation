@@ -42,7 +42,8 @@ document.getElementById ("cvc").addEventListener("keyup", restriccionCodigo);
 
  
 //algoritmo Luhn 
-function isValid () {
+function isValid (evento) {
+  evento.preventDefault()
   const numeroDeTarjetaInput = document.getElementById("numeroDeTarjeta").value;
     if (validator.isValid(numeroDeTarjetaInput) == true) {
       let overlay = document.getElementById("overlay");
@@ -54,8 +55,8 @@ function isValid () {
       } 
 }
 
-const botonValidar = document.getElementById ("botonValidar")
-botonValidar.addEventListener ("click", isValid)
+const formulario = document.getElementById ("formulario")
+formulario.addEventListener("submit", isValid)
 
   
 // agregamos evento al boton cerrar del popup

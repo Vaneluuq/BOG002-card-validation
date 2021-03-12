@@ -56,7 +56,7 @@ footer{
     bottom: 0;
     padding-top: 3px;
     padding-bottom: 0;
-    background-color: rgb(134, 134, 134);;
+    background-color: rgb(134, 134, 134);
 }
 
 
@@ -289,6 +289,7 @@ footer .redesIg{
     position: absolute;
     left: 580px;
 }
+
 
 #pagar{
     background: rgb(92, 174, 241);
