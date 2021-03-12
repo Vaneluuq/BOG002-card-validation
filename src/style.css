@@ -114,7 +114,7 @@ footer .texto-derechos-reservados {
 }
 
 .overlay {
-    background-color: rgba(0,0,0,.3);
+    background-color: rgba(100, 119, 172, 0.3);
     position: fixed;
     top: 0;
     left: 0;
@@ -129,18 +129,13 @@ footer .texto-derechos-reservados {
     visibility: visible;
 }
 
- .overlay.ocultar {
-    visibility: hidden;
- }
- 
-
 .popup {
     background-color:  cornsilk;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,3);
     border-radius: 3px;
     padding: 20px;
-    width: 300px;
-    height: 150px;
+    width: 270px;
+    height: 160px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -148,7 +143,8 @@ footer .texto-derechos-reservados {
 
 .popup h3 {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    color: rgb(64, 66, 68);
 }
 
 .popup .validacionTarjeta {
@@ -156,15 +152,16 @@ footer .texto-derechos-reservados {
     margin-bottom: 10px;
 }
 
-.btnCerrar .cerrarPopup {
-    padding: 0px 20px;
-    height: 40px;
-    line-height: 40px;
+.cerrarPopup {
+    padding: 0px 10px;
+    height: 30px;
+    line-height: 30px;
     border: none;
     color:rgb(245, 245, 245);
-    background: rgb(31, 107, 168);
+    background: rgb(92, 174, 241);
     cursor: pointer;
     transition: .3s ease all;
+    border-radius: 5px;
     
 }
 
@@ -192,8 +189,8 @@ footer .texto-derechos-reservados {
     left: 0px;
     right: 0px;
     content:" ";
-    background: -webkit-linear-gradient(to right, #76b9d8, #90a1fc);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4195bd, #afaaf7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #76b9d8, #90a1fc); 
+    background: linear-gradient(to right, #4195bd, #afaaf7); 
     height: 100%;
     width: 100%;
     filter: blur(20px);
@@ -231,12 +228,12 @@ footer .texto-derechos-reservados {
 
 #form #valor{
     position: absolute;
-    left: 400px;
+    left: 510px;
 }
 
 #form #valorMultiplicacion{
     position: absolute;
-    left: 550px;
+    left: 590px;
 }
 
 

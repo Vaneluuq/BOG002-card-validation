@@ -13,11 +13,11 @@ function ocultarMostrar (pantallaEncendida , pantallaApagada){
 
 // calculamos valor a pagar del producto y agregamos el evento
 const btnCalcular = document.getElementById("pagar")
-  btnCalcular.addEventListener("click", valorTotal())
+  btnCalcular.addEventListener("click", valorTotal)
   function valorTotal() {
     let cantidadProductos= document.getElementById("cantidadProductos").value;
-    document.getElementById("valorMultiplicacion").innerHTML= "EL TOTAL A PAGAR ES $ "+ validator.valorTotal(cantidadProductos); 
-    document.getElementById("valor").innerHTML= "INGRESA LA SIGUIENTE INFORMACIÓN PARA FINALIZAR LA COMPRA ";
+    document.getElementById("valorMultiplicacion").innerHTML= "TU TOTAL A PAGAR ES $ "+ validator.valorTotal(cantidadProductos); 
+    document.getElementById("valor").innerHTML= "INGRESA LOS DATOS DE TU TARJETA PARA FINALIZAR ";
 }
 
 
@@ -61,7 +61,12 @@ function isValid () {
 
 document.getElementById("cerrarPopup").addEventListener("click", function () {
   let overlay = document.getElementById("overlay");
-  overlay.classList.remove("active");
-  overlay.classList.add ("ocultar")
+  overlay.classList.remove("active");  
 })
 
+const nombreAqui = document.getElementById("nombreCliente").value;
+console.log (nombreAqui)
+/*function llamarCliente () {
+  document.getElementById ("cajaNombre").innerHTML= nombreAqui;
+  return llamarCliente;
+}*/
