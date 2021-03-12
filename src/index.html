@@ -32,12 +32,12 @@
            <h3 id="parrafo1" class="parrafo1">Tipo de publicación: Digital <br>
             Autor: Anthony Rowsbell. <br> 
             Editorial: Mdios Editores S.A <br>
-            Número de paginas: 185</h3><br><br> <hr>
-            <br>
-            <h3>Valor: $ 15000</h3>
+            Número de paginas: 185</h3><br><br><hr>
+           <br>
+           <h3>Valor: $ 15000</h3>
            <h3 id="parrafo2">Productos a tu carro:</h3>
            <br> 
-           <input type="number" required id="cantidadProductos" min="1" max="99"> 
+           <input type="number" id="cantidadProductos" min="1" max="99"> 
            <input class="submit" type="button" value="Pagar" id="pagar">
            <br>
            <br>
@@ -54,9 +54,9 @@
         <br>
         <div class="bloque-tarjeta">
             <label for="numeroDeTarjeta">Número de tarjeta</label>
-            <input type="text" required id="numeroDeTarjeta" class="formularioInput" placeholder="---- ---- ---- ----" maxlength="16" required>
+            <input type="text" id="numeroDeTarjeta" class="formularioInput" placeholder="---- ---- ---- ----" maxlength="16">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombreCliente" placeholder="Nombre en tarjeta" class="formularioInput" autocomplete="off"  required><br>
+            <input type="text" id="nombreCliente" placeholder="Nombre en tarjeta" class="formularioInput" autocomplete="off"><br>
             <label for="fechaV">Fecha vencimiento</label>
             <input type="date" id="fechaV" class="formularioInput"><br>
             <label for="cvc">Código de seguridad</label>
@@ -65,15 +65,13 @@
         </div>
         <div class="overlay" id="overlay">
             <div class="popup" id="popup">
-                <h3 class="cajaNombre"> </h3>
+                <h3> </h3>
                 <h3>Tu tarjeta </h3> <br>
                 <p class="validacionTarjeta" id="validacionTarjeta"></p>
                 <h3 >se ha validado con exito </h3>
                 <h3 >Gracias por  tu compra </h3>
-               <br>
+                <br>
                 <button id="cerrarPopup" class="cerrarPopup" onclick="location.reload()">Cerrar</button>
-                
-
             </div>
         </div>
     </section>
@@ -81,18 +79,33 @@
     <br>
 </main>
 <footer>
-    <nav class="containerFooter">
-        <a href="http://www.facebook.com" target="_blank"> <img src="imagenes/fbk-icon.png" width="35px"  class="redes"> </a> 
-        <a href="http://www.instagram.com" ><img src="imagenes/insta-icon.png" width="43px"  class="redes"></a> 
-    </nav>
-    <p class="texto-derechos-reservados">&copy;®Todos los derechos reservados Ebooklic <br>
-        Carrera 33 # 5-52 Bogotá-Colombia <br>
-        Línea nacional: 01-8000565859
-    </p>
-
-</footer>  
+    <div class="contenedor-footer">
+        <div class="columna columna-33">
+          <h3>Siguenos en nuestra redes sociales</h3>
+             <a href="http://www.facebook.com" target="_blank"> <img src="imagenes/fbk-icon.png" width="35px"  class="redes"> </a> 
+             <a href="http://www.instagram.com" ><img src="imagenes/insta-icon.png" width="43px"  class="redes"></a> 
+        </div>
+        <div class="columna columna-33">
+            <h3>Como nos encuentras</h3><br>
+            <ul>
+              <li>Carrera 33 # 5-52 Bogotá-Colombia</li>
+              <li>Línea nacional: 01-8000565859</li>
+            </ul>
+        </div>
+        <div class="columna columna-33">
+           <h3 class="infolegal">Informacion legal</h3>
+                <ul>
+                    <li> <a href="#condicionesUso">Condiciones de uso</a></li>
+                    <li><a href="#politicaCookies">Politica de cookies</a></li>
+                    <li><a href="#politicaPrivacidad">Politica de privacidad</a></li>
+                </ul>
+        </div>
+    </div>
+     <div class="barra-footer">
+         &copy;®Todos los derechos reservados Ebooklic - 2021
+     </div>
+  </footer>  
 <script src="index.js" type="module"></script>
 
 </body>
-
 </html>
