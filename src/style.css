@@ -92,7 +92,7 @@ footer .barra-footer {
 
 
 .parrafo1{
-    color: rgb(47, 76, 107);
+    color:  rgb(50, 136, 206);
     font-size: 18px;
 }
 
@@ -249,15 +249,14 @@ footer .barra-footer {
 
 #botonValidar {
     position: absolute;
-    left: 30%;
+    left: 34%;
     border: 0;
-    background: #12A2F3;
+    background: rgb(92, 174, 241);
     border: #777b7e;
     padding: 5px;
     color: white;
     margin: 1px 0;
     width:auto;
-    text-transform: uppercase;
     cursor: pointer;
     border-radius: 4px;
     text-shadow: 1px 1px 1px #5e6266;
@@ -266,11 +265,20 @@ footer .barra-footer {
 
 #form #valor{
     position: absolute;
-    left: 510px;
+    left: 500px;
 }
 
 
 #form #valorMultiplicacion{
     position: absolute;
-    left: 590px;
+    left: 580px;
+}
+
+#pagar{
+    background: rgb(92, 174, 241);
+    padding: 3px;
+    border: #777b7e;
+    color: white;
+    border-radius: 3px;
+    
 }
