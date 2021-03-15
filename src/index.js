@@ -1,7 +1,7 @@
 import validator from "./validator.js";
 
 //pasamos a la siguiente pagina ocultando el contenido anterior
-document.getElementById("pagar").addEventListener("click", cambioDePagina);
+document.getElementById("formularioProductos").addEventListener("submit", cambioDePagina);
   function cambioDePagina() {
     ocultarMostrar("form","contenedor");
 }
@@ -12,13 +12,15 @@ function ocultarMostrar (pantallaEncendida , pantallaApagada){
 
 
 // calculamos valor a pagar del producto y agregamos el evento
-const btnCalcular = document.getElementById("pagar")
-  btnCalcular.addEventListener("click", valorTotalCompra)
-  function valorTotalCompra() {
+const formularioProductos = document.getElementById("formularioProductos")
+formularioProductos.addEventListener("submit", valorTotalCompra)  
+function valorTotalCompra(evento) {
+    evento.preventDefault()
     let cantidadProductos= document.getElementById("cantidadProductos").value;
     document.getElementById("valorMultiplicacion").innerHTML= "TU TOTAL A PAGAR ES $ "+ validator.valorTotalCompra(cantidadProductos); 
     document.getElementById("valor").innerHTML= "INGRESA LOS DATOS DE TU TARJETA PARA FINALIZAR ";
 }
+
 
 
 // Restriccion de letras y espacios numero de tarjeta  
