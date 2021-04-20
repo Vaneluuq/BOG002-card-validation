@@ -75,7 +75,7 @@ El prototipo final fue desarrollado en el programa Figma
 
 ### Autores
 
-•	Natalia Narváez - Documentación y Desarrollo - @LinaAmaya5
+•	Natalia Narváez - Documentación y Desarrollo - @Natnarben
 •	Vanessa Zuñiga - Documentación y Desarrollo- @Vaneluuq
 
 Colaboradores quiénes han participado en este proyecto:
